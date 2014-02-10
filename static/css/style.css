@@ -2,3 +2,9 @@ body {
     background: url('https://dl.dropboxusercontent.com/u/27977404/pabg.jpg');
     background-size: cover;
 }
+.mastfoot .social {
+	font-size: 242%;
+}
+.modal {
+	color: #333;
+}
