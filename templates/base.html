@@ -1,11 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="en" ng-ap="paxapy">
+<html lang="en" ng-app="paxapy">
 <head>
     <title>paxapy</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="/css/cover.css">
@@ -19,20 +21,13 @@
                     <div class="inner">
                         <h3 class="masthead-brand">paxapy</h3>
                         <ul class="nav masthead-nav">
-                            <li class="active"><a href="#">home</a></li>
-                            <li><a href="#">cv</a></li>
-                            <li><a href="#">blog</a></li>
+                            <li active="/"><a href="#">home</a></li>
+                            <li active="/cv"><a href="#cv">cv</a></li>
+                            <li active="/something"><a href="#something">something</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="inner cover">
-                    <h1 class="cover-heading">
-                        i
-                        <a href data-toggle="modal" data-target=".mean-modal">mean</a>
-                        it
-                    </h1>
-                    <p class="lead">cutting-edge technologies project</p>
-                </div>
+                <div class="inner cover" ng-view></div>
                 <div class="mastfoot">
                     <div class="inner">
                         <p class="social">
@@ -46,27 +41,10 @@
             </div>
         </div>
     </div>
-    <div class="modal fade mean-modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">stack</h4>
-                </div>
-                <div class="modal-body">
-                    <p>mongo</p>
-                    <p>express</p>
-                    <p>angular</p>
-                    <p>node</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">okay</button>        
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

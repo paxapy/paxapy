@@ -1,0 +1,10 @@
+<div ng-init="items=[]">
+    <ol class="something-items">
+        <li ng-repeat="item in items track by $index">{{ item }}</li>
+    </ol>
+    <br>
+    <form name="form" ng-submit="items.push(item); item=''">
+        <input ng-model="item" type="text" placeholder="type something to remember" class="something-input"><br>
+        <small>*actually it doesn't even stored yet</small>
+    </form>
+</div>
